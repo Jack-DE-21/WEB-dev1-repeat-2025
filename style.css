@@ -1,0 +1,143 @@
+/* Reset and base layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: url('images/lisa-live-concert-3840x2160-20868.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Header and Footer */
+header, footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: rgba(226, 22, 22, 0.664);
+  font-weight: bold;
+}
+
+/* Main Container */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Flex Layouts */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.flex-lineup {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background-color: rgba(5, 5, 5, 0.6);
+}
+
+/* Image Figure */
+figure {
+  max-width: 300px;
+  padding-left: 20%;
+  padding-bottom: 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .flex-container,
+  .flex-lineup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Fomantic UI menu overrides */
+.ui.menu.custom-white {
+  background-color: #f8f8f8cc !important;
+  box-shadow: 0 2px 5px rgba(7, 7, 7, 0.1);
+  border: none !important;
+}
+
+.ui.menu.custom-white .item {
+  color: #e9e0e0 !important;            /* visible dark text */
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.ui.menu.custom-white .item:hover {
+  background-color: #f4f4f4 !important;
+  color: #2185d0 !important;            /* highlight on hover */
+}
+
+.ui.menu.custom-white .item.active {
+  border-bottom: 2px solid #2185d0 !important; /* active underline */
+  color: #2185d0 !important;
+}
+
+/* Page-specific backgrounds */
+body.lineup-page {
+  background: url("images/dua-lipa-model-singer-portrait-beautiful-3840x2160-5859.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-position: 70%;
+}
+
+
+/* Give space above tables */
+table {
+  margin-top: 17rem;   /* pushes table down */
+  border-collapse: collapse;
+  width: 20%;
+  margin-left: 0%;
+}
+
+/* Optional: make it look cleaner */
+table caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 1rem; /* spacing between caption and table */
+}
+
+
+
+/* Page-specific background for tickets page */
+body.tickets-page {
+  background: url("images/rapper-kendrick-lamar-performs-onstage-at-rolling-loud-miami-2022.webp") no-repeat center center fixed;
+  background-size: cover;
+}

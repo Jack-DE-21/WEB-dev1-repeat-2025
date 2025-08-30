@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lineup – Longitude Festival 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css"
+  >
+ 
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    .ui.three.cards .card .image img {
+      object-fit: cover;
+      height: 200px;
+    }
+    
+    .ui.dividing.header {
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body class="lineup-page">
+
+  <!-- Header & Centered Navigation -->
+  <header>
+    <h1>Longitude Festival 2025</h1>
+    <div class="ui container">
+      <nav class="ui secondary pointing menu custom-white" style="justify-content: center; display: flex;">
+        <a class="item" href="index.html">Home</a>
+        <a class="item active" href="lineup.html">Lineup</a>
+        <a class="item" href="tickets.html">Tickets</a>
+        <a class="item" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="ui container">
+
+      <h2 class="ui center aligned header">Festival Packages</h2>
+
+      <div class="ui three stackable cards">
+
+        <!-- General Admission -->
+        <div class="card">
+          <div class="image">
+            <img class="ui circular image" src="images/dua-lipa-model-singer-portrait-beautiful-3840x2160-5859.jpg" alt="General Admission">
+          </div>
+          <div class="content">
+            <div class="header">General Admission</div>
+            <div class="meta">€90</div>
+            <div class="description">
+              Full access to all main stages and food vendors.
+            </div>
+            <!-- Star rating component -->
+            <div class="ui star rating" data-rating="4" data-max-rating="5"></div>
+          </div>
+          <div class="extra content">
+            <button class="ui primary fluid button">Book GA</button>
+          </div>
+        </div>
+
+        <!-- VIP Package -->
+        <div class="card">
+          <div class="image">
+            <img class="ui circular image" src="images/dua-lipa-model-singer-portrait-beautiful-3840x2160-5859.jpg" alt="VIP Package">
+          </div>
+          <div class="content">
+            <div class="header">VIP Package</div>
+            <div class="meta">€180</div>
+            <div class="description">
+              All-access + VIP lounge, private bars, priority entry.
+            </div>
+            <div class="ui star rating" data-rating="5" data-max-rating="5"></div>
+          </div>
+          <div class="extra content">
+            <button class="ui secondary fluid button">Book VIP</button>
+          </div>
+        </div>
+
+        <!-- VIP Experience -->
+        <div class="card">
+          <div class="image">
+            <img class="ui circular image" src="images/dua-lipa-model-singer-portrait-beautiful-3840x2160-5859.jpg" alt="VVIP Experience">
+          </div>
+          <div class="content">
+            <div class="header">VIP Experience</div>
+            <div class="meta">€300</div>
+            <div class="description">
+              VIP + backstage tours, artist meet-n-greets, premium swag.
+            </div>
+            <div class="ui star rating" data-rating="6" data-max-rating="6"></div>
+          </div>
+          <div class="extra content">
+            <button class="ui teal fluid button">Book VVIP</button>
+          </div>
+        </div>
+      </div>
+
+      <!--  Stage Times Table -->
+      <h3 class="ui dividing header">Stage Times</h3>
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Artist</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Main Stage</td>
+            <td>Kendrick Lamar</td>
+            <td>9:30 PM</td>
+          </tr>
+          <tr>
+            <td>Main Stage</td>
+            <td>Dua Lipa</td>
+            <td>8:00 PM</td>
+          </tr>
+          <tr>
+            <td>Electronic Stage</td>
+            <td>Bicep</td>
+            <td>10:00 PM</td>
+          </tr>
+          <tr>
+            <td>Electronic Stage</td>
+            <td>Peggy Gou</td>
+            <td>7:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="ui inverted vertical footer segment" style="padding: 2rem; margin-top: 3rem;">
+    <div class="ui center aligned container">
+      &copy; 2025 Longitude Festival. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Fomantic UI & jQuery JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+  <script>
+    // Initialize rating widget
+    $('.ui.rating').rating({ interactive: false });
+  </script>
+</body>
+</html>

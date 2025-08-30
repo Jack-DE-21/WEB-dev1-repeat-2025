@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tickets – Longitude 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css"
+  >
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tickets-page">
+
+  <!-- Header & Navigation -->
+  <header>
+    <h1>Longitude Festival 2025</h1>
+    <div class="ui container">
+      <nav class="ui secondary pointing menu custom-white" style="justify-content:center; display:flex;">
+        <a class="item" href="index.html">Home</a>
+        <a class="item" href="lineup.html">Lineup</a>
+        <a class="item active" href="tickets.html">Tickets</a>
+        <a class="item" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="ui container" style="margin-top:2rem;">
+
+    <!-- Tickets Sold Progress -->
+    <div class="ui indicating progress" data-percent="90">
+      <div class="bar"></div>
+      <div class="label">Tickets sold: 90%</div>
+    </div>
+
+    <!-- Ticket Selection Grid -->
+    <div class="ui stackable grid" style="margin-top: 3rem;">
+  
+      <div class="sixteen wide column">
+        <h2 class="ui center aligned header">Choose Your Ticket</h2>
+      </div>
+
+      <div class="eight wide column">
+        <div class="ui three stackable cards">
+          <!-- GA Card -->
+          <div class="card">
+            <div class="content">
+              <div class="header">General Admission</div>
+              <div class="meta">€90</div>
+              <div class="description">
+                Access to all main stages and general areas.
+              </div>
+            </div>
+            <div class="extra content">
+              <button class="ui primary fluid button open-modal" data-ticket="General Admission">Book GA</button>
+            </div>
+          </div>
+
+          <!-- VIP Card -->
+          <div class="card">
+            <div class="content">
+              <div class="header">VIP Package</div>
+              <div class="meta">€180</div>
+              <div class="description">
+                Fast entry, exclusive lounges, premium facilities.
+              </div>
+            </div>
+            <div class="extra content">
+              <button class="ui secondary fluid button open-modal" data-ticket="VIP Package">Book VIP</button>
+            </div>
+          </div>
+
+          <!-- VVIP Card -->
+          <div class="card">
+            <div class="content">
+              <div class="header">VVIP Experience</div>
+              <div class="meta">€300</div>
+              <div class="description">
+                All VIP perks + backstage tour & meet-and-greet.
+              </div>
+            </div>
+            <div class="extra content">
+              <button class="ui teal fluid button open-modal" data-ticket="VVIP Experience">Book VVIP</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form Column -->
+      <div class="eight wide column">
+        <div class="ui segment">
+          <h3 class="ui header">Limited stock only</h3>
+          <p>Select a ticket above to open the booking form.</p>
+        </div>
+        <div class="ui info message">
+          Hurry, tickets are limited!
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Booking Modal -->
+  <div class="ui small modal" id="booking-modal">
+    <i class="close icon"></i>
+    <div class="header">Book <span id="modal-ticket-type"></span></div>
+    <div class="content">
+      <form class="ui form" id="booking-form">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label>Ticket Quantity</label>
+          <input type="number" name="quantity" min="1" value="1" required>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui cancel button">Cancel</div>
+      <div class="ui primary button" id="submit-booking">Confirm</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="ui inverted vertical footer segment" style="padding:2rem; margin-top:3rem;">
+    <div class="ui center aligned container">
+      &copy; 2025 Longitude Festival. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Fomantic UI & jQuery JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+  <script>
+    // Initialize components
+    $('.ui.progress').progress();
+    $('#booking-modal').modal({ autofocus: false });
+
+    // Open modal and set ticket type
+    $('.open-modal').click(function() {
+      const type = $(this).data('ticket');
+      $('#modal-ticket-type').text(type);
+      $('#booking-modal').modal('show');
+    });
+
+    // Handle confirm
+    $('#submit-booking').click(() => {
+      // (You’d wire up form submission here)
+      $('#booking-modal').modal('hide');
+      $('.ui.message.info').html('<div class="ui positive message">Thanks! Your booking request is received.</div>');
+    });
+  </script>
+</body>
+</html>
